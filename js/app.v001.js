@@ -6,6 +6,7 @@
     var qualifications;
     var eliminations;
     var multiplier;
+    var fouls;
 
     // reset score sheet
     function resetScoreSheet() {
@@ -31,6 +32,7 @@
         qualifications = true;
         eliminations = false;
         multiplier = 1;
+        fouls = 0;
 
         // reset html elements
         $('#qualifications').addClass('btn-success').removeClass('btn-outline-success');
@@ -120,7 +122,11 @@
             }
         }
 
+        // add bonus points
         pts += bonus;
+
+        // subtract fouls
+        pts -= fouls;
 
         // human readable format
         if (qualifications) {
@@ -290,6 +296,14 @@
             $('#win').addClass('btn-outline-success').removeClass('btn-success');
             $('#tie').addClass('btn-outline-success').removeClass('btn-success');
             $(this).addClass('btn-danger').removeClass('btn-outline-danger');
+            break;
+
+            case 'foul':
+            fouls += 5;
+            break;
+
+            case 'tech':
+            fouls += 25;
             break;
 
             // the only buttons without ids are the multipliers
