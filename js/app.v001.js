@@ -43,6 +43,8 @@
         $('#win').addClass('btn-outline-success').removeClass('btn-success');
         $('#tie').addClass('btn-outline-success').removeClass('btn-success');
         $('#loss').addClass('btn-danger').removeClass('btn-outline-danger');
+        $('.multiplier').addClass('btn-outline-primary').removeClass('btn-primary');
+        $('#first-multiplier').addClass('btn-primary').removeClass('btn-outline-primary');
 
         // scroll to top if not already there
         $('body').scrollTop(0);
@@ -50,7 +52,7 @@
 
     // calculate points
     function calculatePts() {
-        return ((score.auto.crossed_baseline * 5) + score.auto.high_goal + Math.floor(score.auto.low_goal / 3) + (score.auto.rotors * 60) + Math.floor(score.tele.high_goal / 3) + Math.floor(score.tele.low_goal / 9) + (score.tele.rotors * 40) + (score.tele.climbed_rope * 50));
+        return Math.floor((score.auto.crossed_baseline * 5) + score.auto.high_goal + (score.auto.low_goal / 3) + (score.auto.rotors * 60) + (score.tele.high_goal / 3) + (score.tele.low_goal / 9) + (score.tele.rotors * 40) + (score.tele.climbed_rope * 50));
     }
 
     // calculate kpa
@@ -123,6 +125,8 @@
             if (bonus > 0) {
                 $('#bonus-pts').html('+' + bonus + ' pts');
             }
+        } else {
+            $('#bonus-pts').html('');
         }
 
         // add bonus points
