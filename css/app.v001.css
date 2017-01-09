@@ -60,3 +60,18 @@ input[type="text"]:disabled{
     color: #d9534f !important;
     background-color: transparent !important;
 }
+@media (min-width: 576px) {
+    #score {
+        position: absolute !important;
+        left: 200px;
+    }
+    #multipliers {
+        float: none;
+        position: absolute;
+        left: 216px;
+        top: 110px;
+    }
+    #win, #tie, #loss {
+        width: 108px !important;
+    }
+}
