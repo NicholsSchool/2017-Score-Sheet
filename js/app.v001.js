@@ -123,7 +123,7 @@
                 bonus += 100;
             }
             if (bonus > 0) {
-                $('#bonus-pts').html('+' + bonus + ' pts');
+                $('#bonus-pts').html('+' + bonus + ' bonus pts');
             }
         } else {
             $('#bonus-pts').html('');
