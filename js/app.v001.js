@@ -77,13 +77,23 @@
         } else {
             var auto_seconds = Math.ceil(score.auto.low_goal / 5);
         }
-        $('#auto-seconds').html(auto_seconds);
+        $('#auto-seconds').html('~' + auto_seconds + ' sec');
+        if (auto_seconds > 15) {
+            $('#auto-seconds').addClass('overlimit');
+        } else {
+            $('#auto-seconds').removeClass('overlimit');
+        }
         if (score.tele.high_goal > score.tele.low_goal) {
             var tele_seconds = Math.ceil(score.tele.high_goal / 5);
         } else {
             var tele_seconds = Math.ceil(score.tele.low_goal / 5);
         }
-        $('#tele-seconds').html(tele_seconds);
+        $('#tele-seconds').html('~' + tele_seconds + ' sec');
+        if (tele_seconds > 135) {
+            $('#tele-seconds').addClass('overlimit');
+        } else {
+            $('#tele-seconds').removeClass('overlimit');
+        }
     }
 
     // display the score
