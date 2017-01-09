@@ -1,5 +1,7 @@
 # 2017 FRC STEAMworks Score Sheet
 
+https://nicholsschool.github.io/2017-Score-Sheet/
+
 This is a quickly made example of how scoring works within the game.
 
 A few assumptions were made while reviewing table 4-1 (rewards) and section 4-4 (rule violations).
