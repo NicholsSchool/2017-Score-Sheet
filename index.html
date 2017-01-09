@@ -6,7 +6,6 @@
     <meta name="description" content="Steamworks Score Sheet">
     <meta name="author" content="Jon Kiddy, jon.kiddy@gmail.com, FRC Team 4930">
     <link rel="icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" href="apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57×57-precomposed.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72×72-precomposed.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114×114-precomposed.png" />
@@ -25,11 +24,11 @@
     </nav>
     <div id="score" class="hidden">0 pts, 0 kPa, 0 rp</div>
     <div id="first-steamworks">
-        <img id="steamworks-logo" src="img/steamworks.gif" alt="FIRST STEAMworks Logo" width="100%">
+        <img id="steamworks-logo" src="img/steamworks.gif" alt="FIRST STEAMworks Logo" style="width: 100%">
         <button id="open-score-sheet" class="btn btn-lg btn-outline-primary">Open Score Sheet</button><br><br>
         <p>More info and code availble on <a href="https://github.com/NicholsSchool/2017-Score-Sheet">GitHub.</a><br>
             Built by <a href="http://robotics.nicholsschool.org/" target="_blank">FRC Team 4930</a>. Enjoy!</p>
-            <img id="4930-logo" src="img/4930.png" alt="FRC Team 4930 Logo" width="55%">
+            <img id="4930-logo" src="img/4930.png" alt="FRC Team 4930 Logo" style="width: 55%">
         </div>
         <div class="content hidden">
             <div class="form-inline">
@@ -143,14 +142,22 @@
                     <button id="tech" class="btn btn-warning" style="width:20%">Tech</button>
                 </div>
             </div>
-            <div style="text-align: right;width: 100%">
-                <p style="color: #CCCCCC">v.1.0.0</p>
-            </div>
+        <div style="text-align: right;width: 100%">
+            <p style="color: #CCCCCC">v.1.0.0</p>
         </div>
-        <script src="inc/jquery/jquery-3.1.1.slim.js"></script>
-        <script src="inc/tether/tether.js"></script>
-        <script src="inc/bootstrap/bootstrap.js"></script>
-        <script src="inc/fastclick/fastclick.js"></script>
-        <script src="js/app.v001.js"></script>
-    </body>
-    </html>
+    </div>
+    <script src="inc/jquery/jquery-3.1.1.slim.js"></script>
+    <script src="inc/tether/tether.js"></script>
+    <script src="inc/bootstrap/bootstrap.js"></script>
+    <script src="inc/fastclick/fastclick.js"></script>
+    <script src="js/app.v001.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-90096704-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
