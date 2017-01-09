@@ -88,7 +88,7 @@ input[type="text"]:disabled{
         left: 216px;
         top: 110px;
     }
-    #win, #tie, #loss {
-        width: 108px !important;
+    #win, #tie, #loss, #foul, #tech {
+        width: 64px !important;
     }
 }
