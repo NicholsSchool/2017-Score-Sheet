@@ -43,6 +43,9 @@
         $('#win').addClass('btn-outline-success').removeClass('btn-success');
         $('#tie').addClass('btn-outline-success').removeClass('btn-success');
         $('#loss').addClass('btn-danger').removeClass('btn-outline-danger');
+
+        // scroll to top if not already there
+        $('body').scrollTop(0);
     }
 
     // calculate points
