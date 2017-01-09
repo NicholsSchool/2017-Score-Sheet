@@ -1,11 +1,11 @@
 (function($) {
 
     // initialize variables
-    var qualifications = true;
-    var eliminations = false;
-    var multiplier = 1;
     var score;
     var outcome;
+    var qualifications;
+    var eliminations;
+    var multiplier;
 
     // reset score sheet
     function resetScoreSheet() {
@@ -26,12 +26,18 @@
             }
         };
 
-        // set initial outcome to loss
+        // set initial vars
         outcome = 'loss';
+        qualifications = true;
+        eliminations = false;
+        multiplier = 1;
 
         // reset html elements
+        $('#qualifications').addClass('btn-success').removeClass('btn-outline-success');
+        $('#eliminations').addClass('btn-outline-success').removeClass('btn-success');
         $('input').val(0);
         $('#bonus-pts').html('');
+        $('#bonus-rp').html('');
         $('#win').addClass('btn-outline-success').removeClass('btn-success');
         $('#tie').addClass('btn-outline-success').removeClass('btn-success');
         $('#loss').addClass('btn-danger').removeClass('btn-outline-danger');
