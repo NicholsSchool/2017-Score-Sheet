@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Steamworks Score Sheet">
+    <meta name="author" content="Jon Kiddy, jon.kiddy@gmail.com, FRC Team 4930">
+    <link rel="icon" href="favicon.ico">
+    <title>Steamworks Score Sheet</title>
+    <link href="inc/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="css/app.v001.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+        <div id="page-title" class="navbar-brand mr-auto hidden">Score Sheet</div>
+    </nav>
+    <div id="score" class="hidden">0 pts, 0 kPa, 0 rp</div>
+    <div id="first-steamworks">
+        <img id="steamworks-logo" src="img/steamworks.gif" alt="FIRST STEAMworks Logo" width="100%">
+        <button id="open-score-sheet" class="btn btn-lg btn-outline-primary">Open Score Sheet</button>
+    </div>
+    <div class="content hidden">
+        <div class="form-inline">
+            <div class="input-group">
+                <button id="qualifications" class="btn btn-success" style="width:40%">Qualifications</button>
+                &nbsp;
+                <button id="eliminations" class="btn btn-outline-success" style="width:35%">Eliminations</button>
+                &nbsp;
+                <button id="reset" class="btn btn-outline-danger" style="width:25%">Reset</button>
+            </div>
+        </div>
+        <div style="float:right;margin-top: 8px;">
+            <button class="btn btn-sm btn-primary multiplier" rel="1"><small>1s</small></button>
+            <button class="btn btn-sm btn-outline-primary multiplier" rel="5"><small>5s</small></button>
+            <button class="btn btn-sm btn-outline-primary multiplier" rel="10"><small>10s</small></button>
+        </div>
+        <h5 class="muted">
+            Autonomous:&nbsp; ~ <span id="auto-seconds">0</span> sec
+        </h5>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Crossed baseline</div>
+                <input id="auto-crossed-baseline-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="auto-crossed-baseline-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="auto-crossed-baseline-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Fuels in high goal</div>
+                <input id="auto-high-goal-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="auto-high-goal-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="auto-high-goal-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Fuels in low goal</div>
+                <input id="auto-low-goal-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="auto-low-goal-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="auto-low-goal-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Rotors spinning</div>
+                <input id="auto-rotors-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="auto-rotors-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="auto-rotors-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <h5 class="muted">Teleoperated:&nbsp; ~ <span id="tele-seconds">0</span> sec &nbsp;<span id="bonus-pts"></span> &nbsp;<span id="bonus-rp"></span></h5>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Fuels in high goal</div>
+                <input id="tele-high-goal-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="tele-high-goal-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="tele-high-goal-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Fuels in low goal</div>
+                <input id="tele-low-goal-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="tele-low-goal-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="tele-low-goal-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Rotors spinning</div>
+                <input id="tele-rotors-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="tele-rotors-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="tele-rotors-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">Climbed rope</div>
+                <input id="tele-climbed-rope-counter" type="text" class="form-control" placeholder="0">
+                &nbsp;
+                <button id="tele-climbed-rope-plus" class="btn btn-outline-success up">+</button>
+                &nbsp;
+                <button id="tele-climbed-rope-minus" class="btn btn-outline-danger down">-</button>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="input-group">
+                <button id="win" class="btn btn-outline-success" style="width:33%">Win</button>
+                &nbsp;
+                <button id="tie" class="btn btn-outline-success" style="width:33%">Tie</button>
+                &nbsp;
+                <button id="loss" class="btn btn-danger" style="width:33%">Loss</button>
+            </div>
+        </div>
+    </div>
+    <script src="inc/jquery/jquery-3.1.1.slim.js"></script>
+    <script src="inc/tether/tether.js"></script>
+    <script src="inc/bootstrap/bootstrap.js"></script>
+    <script src="inc/fastclick/fastclick.js"></script>
+    <script src="js/app.v001.js"></script>
+</body>
+</html>

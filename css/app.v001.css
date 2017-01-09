@@ -1,0 +1,62 @@
+
+.container {
+    margin-top: 3em;
+}
+.muted {
+    color: #555;
+}
+button {
+    cursor: pointer;
+}
+#first-steamworks {
+    text-align: center;
+    margin-top: 4em;
+}
+.content {
+    margin: 1em;
+    margin-top: 4.5em;
+}
+#score {
+    color: white;
+    position:fixed;
+    top:1em;
+    right:1.1em;
+    z-index: 9001;
+}
+.form-inline {
+    margin-top: .25em;
+}
+.form-control {
+    width: 70px !important;
+    text-align: center;
+}
+.input-group-addon {
+    min-width: 170px;
+    text-align: left;
+    font-weight: 100;
+}
+.hidden {
+    display: none;
+}
+#bonus-pts, #bonus-rp {
+    font-weight: 400 !important;
+    color: #5cb85c;
+}
+h5 {
+    font-weight: 300;
+    margin-top: .7em;
+}
+input[type="text"]:disabled{
+    background-color:white;
+}
+.multiplier {
+    width: 42px;
+}
+.up-temp {
+    color: #5cb85c !important;
+    background-color: transparent !important;
+}
+.down-temp {
+    color: #d9534f !important;
+    background-color: transparent !important;
+}
