@@ -35,8 +35,6 @@
         $('#qualifications').addClass('btn-success').removeClass('btn-outline-success');
         $('#eliminations').addClass('btn-outline-success').removeClass('btn-success');
         $('input').val(0);
-        $('#bonus-pts').html('');
-        $('#bonus-rp').html('');
         $('#win').addClass('btn-outline-success').removeClass('btn-success');
         $('#tie').addClass('btn-outline-success').removeClass('btn-success');
         $('#loss').addClass('btn-danger').removeClass('btn-outline-danger');
@@ -253,7 +251,6 @@
             if (score.tele.rotors > 0) {
                 score.tele.rotors -= 1;
                 $('#tele-rotors-counter').val(score.tele.rotors);
-                $('#bonus-pts').html('');
             }
             break;
 
