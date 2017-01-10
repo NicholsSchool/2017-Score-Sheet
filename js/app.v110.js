@@ -134,10 +134,11 @@
             var height = $(window).height();
             var width = $(window).width();
             var gamemap = $('#game-map').height();
-            var margin = ((height - gamemap) / 4);
+            var margin = ((height - gamemap) / 2);
             if (width > height) {
                 $('.portrait').addClass('hidden');
-                $('.landscape').removeClass('hidden').css('margin-top', margin);
+                $('.landscape').removeClass('hidden');
+                $('#game-map').css('margin-top', margin);
             } else {
                 $('.landscape').addClass('hidden');
                 $('.portrait').removeClass('hidden');
