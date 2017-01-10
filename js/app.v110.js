@@ -128,6 +128,21 @@
         }
     }
 
+    // when in landscape using an iPhone show field map
+    function monitorWindowSize() {
+        $(window).resize(function(){
+            var height = $(window).height();
+            var width = $(window).width();
+            if (width > height) {
+                $('.portrait').addClass('hidden');
+                $('.landscape').removeClass('hidden');
+            } else {
+                $('.landscape').addClass('hidden');
+                $('.portrait').removeClass('hidden');
+            }
+        });
+    }
+
     // when a button is clicked...
     $('button').click(function(e) {
 
@@ -140,6 +155,9 @@
             $('#score').removeClass('hidden');
             $('#first-steamworks').addClass('hidden');
             $('.content').removeClass('hidden');
+            if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("Android") != -1) || (navigator.platform.indexOf("Linux") != -1) ) {
+                monitorWindowSize();
+            }
             break;
 
             case 'qualifications':
@@ -351,6 +369,8 @@
 
         displayScore();
     });
+
+    // $('#navigator_platform').html(navigator.platform);
 
     // disable direct input
     $('input').prop("disabled", true);
