@@ -6,7 +6,6 @@
     var qualifications;
     var eliminations;
     var multiplier;
-    var fouls;
 
     // reset score sheet
     function resetScoreSheet() {
@@ -31,8 +30,6 @@
         outcome = 'loss';
         qualifications = true;
         eliminations = false;
-        multiplier = 1;
-        fouls = 0;
 
         // reset html elements
         $('#qualifications').addClass('btn-success').removeClass('btn-outline-success');
@@ -43,8 +40,6 @@
         $('#win').addClass('btn-outline-success').removeClass('btn-success');
         $('#tie').addClass('btn-outline-success').removeClass('btn-success');
         $('#loss').addClass('btn-danger').removeClass('btn-outline-danger');
-        $('.multiplier').addClass('btn-outline-primary').removeClass('btn-primary');
-        $('#first-multiplier').addClass('btn-primary').removeClass('btn-outline-primary');
 
         // scroll to top if not already there
         $('body').scrollTop(0);
@@ -131,9 +126,6 @@
 
         // add bonus points
         pts += bonus;
-
-        // subtract fouls
-        pts -= fouls;
 
         // human readable format
         if (qualifications) {
@@ -306,11 +298,23 @@
             break;
 
             case 'foul':
-            fouls += 5;
+            swal({
+              title: "Foul!",
+              text: "+5pts credited to opponent.",
+              type: "error",
+              timer: 5000,
+              showConfirmButton: true
+            });
             break;
 
             case 'tech':
-            fouls += 25;
+            swal({
+              title: "Technical Foul!",
+              text: "+25pts credited to opponent.",
+              type: "error",
+              timer: 5000,
+              showConfirmButton: true
+            });
             break;
 
             // the only buttons without ids are the multipliers
