@@ -64,7 +64,7 @@
         if (outcome == 'tie') {
             rp += 1;
         }
-        if (calculateKpa() > 40) {
+        if (calculateKpa() > 39) {
             rp += 1;
         }
         if (score.tele.rotors == 4) {
@@ -111,7 +111,7 @@
 
         // additional calculations during playoffs
         if (eliminations) {
-            if (kpa > 40) {
+            if (kpa > 39) {
                 bonus += 20;
             }
             if (score.tele.rotors == 4) {
