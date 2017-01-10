@@ -10,7 +10,7 @@ button {
 }
 #first-steamworks {
     text-align: center;
-    margin-top: 4em;
+    margin-top: 1em;
 }
 .content {
     margin-top: 0;
@@ -23,11 +23,9 @@ button {
     color: white;
     z-index: 9001;
     background-color: #0275d8;
-    margin-left: -14px;
-    margin-right: -14px;
-    margin-top: -2px;
-    margin-bottom: 12px;
+    margin: -2px -14px 12px;
     text-align: center;
+    padding-top: 20px;
 }
 .form-inline {
     margin-top: .25em;
@@ -131,7 +129,7 @@ input[type="text"]:disabled{
         float: none;
         position: absolute;
         left: 216px;
-        top: 110px;
+        top: 130px;
         margin-top: 0 !important;
     }
 }
