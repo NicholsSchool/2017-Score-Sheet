@@ -273,6 +273,13 @@
             $(this).addClass('btn-success').removeClass('btn-outline-success');
             $('#tie').addClass('btn-outline-success').removeClass('btn-success');
             $('#loss').addClass('btn-outline-danger').removeClass('btn-danger');
+            swal({
+              title: "You Won!",
+              text: "Two ranking points granted.",
+              type: "success",
+              timer: 3000,
+              showConfirmButton: true
+            });
             break;
 
             case 'tie':
@@ -280,6 +287,13 @@
             $('#win').addClass('btn-outline-success').removeClass('btn-success');
             $(this).addClass('btn-success').removeClass('btn-outline-success');
             $('#loss').addClass('btn-outline-danger').removeClass('btn-danger');
+            swal({
+              title: "You Tied!",
+              text: "One ranking point granted.",
+              type: "success",
+              timer: 3000,
+              showConfirmButton: true
+            });
             break;
 
             case 'loss':
@@ -287,14 +301,21 @@
             $('#win').addClass('btn-outline-success').removeClass('btn-success');
             $('#tie').addClass('btn-outline-success').removeClass('btn-success');
             $(this).addClass('btn-danger').removeClass('btn-outline-danger');
+            swal({
+              title: "You Lost!",
+              text: "Zero additional ranking points.",
+              type: "error",
+              timer: 3000,
+              showConfirmButton: true
+            });
             break;
 
             case 'foul':
             swal({
               title: "Foul!",
               text: "+5pts credited to opponent.",
-              type: "error",
-              timer: 5000,
+              type: "warning",
+              timer: 3000,
               showConfirmButton: true
             });
             break;
@@ -303,8 +324,8 @@
             swal({
               title: "Technical Foul!",
               text: "+25pts credited to opponent.",
-              type: "error",
-              timer: 5000,
+              type: "warning",
+              timer: 3000,
               showConfirmButton: true
             });
             break;
