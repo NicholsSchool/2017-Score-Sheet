@@ -133,9 +133,11 @@
         $(window).resize(function(){
             var height = $(window).height();
             var width = $(window).width();
+            var gamemap = $('#game-map').height();
+            var margin = ((height - gamemap) / 2);
             if (width > height) {
                 $('.portrait').addClass('hidden');
-                $('.landscape').removeClass('hidden');
+                $('.landscape').removeClass('hidden').css('margin-top', margin);
             } else {
                 $('.landscape').addClass('hidden');
                 $('.portrait').removeClass('hidden');
@@ -369,8 +371,6 @@
 
         displayScore();
     });
-
-    // $('#navigator_platform').html(navigator.platform);
 
     // disable direct input
     $('input').prop("disabled", true);

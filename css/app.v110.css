@@ -104,9 +104,12 @@ input[type="text"]:disabled{
   -o-transition: none !important;
   transition: none !important;
 }
+.landscape {
+    vertical-align: middle;
+}
 #game-map {
-    height: 100%;
     width: 100%;
+    vertical-align: middle;
 }
 @media (max-width: 321px) {
     #qualifications, #eliminations, #reset {
