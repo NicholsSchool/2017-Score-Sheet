@@ -117,11 +117,6 @@
             if (score.tele.rotors == 4) {
                 bonus += 100;
             }
-            if (bonus > 0) {
-                $('#bonus-pts').html('+' + bonus + ' bonus pts');
-            }
-        } else {
-            $('#bonus-pts').html('');
         }
 
         // add bonus points
