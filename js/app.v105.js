@@ -5,7 +5,7 @@
     var outcome;
     var qualifications;
     var eliminations;
-    var multiplier;
+    var multiplier = 1;
 
     // reset score sheet
     function resetScoreSheet() {
