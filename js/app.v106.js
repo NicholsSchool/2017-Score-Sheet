@@ -322,7 +322,17 @@
             multiplier = Number($(this).attr('rel'));
             $('.multiplier').removeClass('btn-primary').addClass('btn-outline-primary');
             $(this).removeClass('btn-outline-primary').addClass('btn-primary');
-            console.log(multiplier);
+            if (multiplier == 1) {
+                $('.up').html("+").removeClass('fives tens');
+                $('.down').html("-").removeClass('fives tens');
+            }
+            if (multiplier == 5) {
+                $('.multiplier-tag').html("<small>5</small>").addClass('fives').removeClass('tens');
+            }
+            if (multiplier == 10) {
+                $('.multiplier-tag').html("<small>10</small>").addClass('tens').removeClass('fives');
+            }
+
             break;
         }
 

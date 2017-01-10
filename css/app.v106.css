@@ -78,6 +78,21 @@ input[type="text"]:disabled{
     text-align: center;
     padding: 0px;
 }
+.up, .down {
+    padding: 9px 16px;
+}
+.up.fives {
+    padding: 9px 17px;
+}
+.down.fives {
+    padding: 9px 16px;
+}
+.up.tens {
+    padding: 9px 13.5px;
+}
+.down.tens {
+    padding: 9px 12px;
+}
 @media (max-width: 321px) {
     #qualifications, #eliminations, #reset {
         padding: 0px !important;
