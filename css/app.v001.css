@@ -116,3 +116,8 @@ input[type="text"]:disabled{
         width: 64px !important;
     }
 }
+@media (min-width: 992px) {
+    #score {
+        margin-top: 1px;
+    }
+}
