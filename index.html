@@ -20,9 +20,8 @@
 </head>
 <body>
     <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
-        <div id="page-title" class="navbar-brand mr-auto hidden">Score Sheet</div>
+        <div id="score" class="hidden">0 pts, 0 kPa, 0 rp</div>
     </nav>
-    <div id="score" class="hidden">0 pts, 0 kPa, 0 rp</div>
     <div id="first-steamworks">
         <img id="steamworks-logo" src="img/steamworks.gif" alt="FIRST STEAMworks Logo" style="width: 100%">
         <button id="open-score-sheet" class="btn btn-lg btn-outline-primary">Open Score Sheet</button><br><br>
@@ -142,8 +141,9 @@
                     <button id="tech" class="btn btn-warning" style="width:20%">Tech</button>
                 </div>
             </div>
-        <div style="text-align: right;width: 100%">
-            <p style="color: #CCCCCC">v.1.0.2</p>
+        <div id="footer">
+            <div style="float: right">v.1.0.3</div>
+            <div>2017 STEAMworks Score Sheet</div>
         </div>
     </div>
     <script src="inc/jquery/jquery-3.1.1.slim.js"></script>

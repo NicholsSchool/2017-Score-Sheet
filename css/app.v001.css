@@ -14,13 +14,12 @@ button {
 }
 .content {
     margin: 1em;
-    margin-top: 4.5em;
+    margin-top: 3.8em;
 }
 #score {
+    font-size: 35px !important;
+    font-weight: 100;
     color: white;
-    position:fixed;
-    top:1em;
-    right:1.1em;
     z-index: 9001;
 }
 .form-inline {
@@ -69,12 +68,34 @@ input[type="text"]:disabled{
 .overlimit {
     color: red;
 }
+#footer {
+    width: 100%;
+    margin-top: 3px;
+    color: #CCCCCC;
+    font-weight: 200;
+}
+.navbar {
+    text-align: center;
+    padding: 0px;
+}
 @media (max-width: 321px) {
     #qualifications, #eliminations, #reset {
         padding: 0px !important;
     }
 }
 @media (min-width: 576px) {
+    .content {
+        margin-top: 4.5em;
+    }
+    #footer {
+        width: 338px;
+    }
+    #score {
+        margin-top: -25px;
+    }
+    .navbar {
+        padding: 30px;
+    }
     .input-group-addon {
         min-width: 175px !important;
     }
@@ -83,7 +104,7 @@ input[type="text"]:disabled{
     }
     #score {
         position: absolute !important;
-        left: 205px;
+        left: 60px;
     }
     #multipliers {
         float: none;
