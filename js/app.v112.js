@@ -65,7 +65,7 @@
         if (calculateKpa() > 39) {
             rp += 1;
         }
-        if (score.tele.rotors == 4) {
+        if (score.tele.rotors + score.auto.rotors == 4) {
             rp += 1;
         }
         return rp;
@@ -219,7 +219,7 @@
             break;
 
             case 'auto-rotors-plus':
-            if (score.auto.rotors < 2) {
+            if (score.auto.rotors < 2 && (score.auto.rotors + score.tele.rotors) < 4) {
                 score.auto.rotors += 1;
                 $('#auto-rotors-counter').val(score.auto.rotors);
             }
@@ -259,7 +259,7 @@
             break;
 
             case 'tele-rotors-plus':
-            if (score.tele.rotors < 4) {
+            if (score.tele.rotors + score.auto.rotors < 4) {
                 score.tele.rotors += 1;
                 $('#tele-rotors-counter').val(score.tele.rotors);
             }
