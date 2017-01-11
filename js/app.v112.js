@@ -176,6 +176,11 @@
 
             case 'reset':
             resetScoreSheet();
+            multiplier = 1;
+            $('.multiplier').removeClass('btn-primary').addClass('btn-outline-primary');
+            $('.up').html("+").removeClass('fives tens btn-success').addClass('btn-outline-success');
+            $('.down').html("-").removeClass('fives tens btn-danger').addClass('btn-outline-danger');
+            $('#first-multiplier').removeClass('btn-outline-primary').addClass('btn-primary');
             break;
 
             case 'auto-crossed-baseline-plus':
