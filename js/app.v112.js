@@ -354,14 +354,18 @@
             $('.multiplier').removeClass('btn-primary').addClass('btn-outline-primary');
             $(this).removeClass('btn-outline-primary').addClass('btn-primary');
             if (multiplier == 1) {
-                $('.up').html("+").removeClass('fives tens');
-                $('.down').html("-").removeClass('fives tens');
+                $('.up').html("+").removeClass('fives tens btn-success').addClass('btn-outline-success');
+                $('.down').html("-").removeClass('fives tens btn-danger').addClass('btn-outline-danger');
             }
             if (multiplier == 5) {
                 $('.multiplier-tag').html("<small>5</small>").addClass('fives').removeClass('tens');
+                $('.up.fives').addClass('btn-success').removeClass('btn-outline-success');
+                $('.down.fives').addClass('btn-danger').removeClass('btn-outline-danger');
             }
             if (multiplier == 10) {
                 $('.multiplier-tag').html("<small>10</small>").addClass('tens').removeClass('fives');
+                $('.up.tens').addClass('btn-success').removeClass('btn-outline-success');
+                $('.down.tens').addClass('btn-danger').removeClass('btn-outline-danger');
             }
 
             break;
