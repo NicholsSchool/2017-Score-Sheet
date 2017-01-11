@@ -112,7 +112,7 @@
             if (kpa > 39) {
                 bonus += 20;
             }
-            if (score.tele.rotors == 4) {
+            if (score.auto.rotors + score.tele.rotors == 4) {
                 bonus += 100;
             }
         }
